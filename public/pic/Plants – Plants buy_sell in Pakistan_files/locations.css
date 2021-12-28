@@ -1,0 +1,487 @@
+@import url('themes.css');
+
+.locations .location
+{
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	display: inline-block;
+	min-width: 230px;
+	max-width: 100%;
+	margin: 0 20px 25px 0;
+	padding: 25px;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+/* disable inline-block to prevent the widget from flowing out of its container */
+.singleLocationWidget .locations .location,
+.locationsListWidget .locations .location{
+	display: block;
+}
+
+.locations .location.hasPhoto
+{
+	padding: 170px 20px 25px;
+    position: relative;
+}
+
+.locations .location h3
+{
+	text-transform: none;
+	font-size: 1.2em;
+	font-weight: bold;
+	letter-spacing: normal;
+	line-height: normal;
+	margin: 0 0 10px;
+}
+.locations .location .location-photo
+{
+	background-size: cover;
+    border: 1px solid #DDDDDD;
+    height: 150px;
+    left: 0;
+    margin-bottom: 10px;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.locations .location .location-photo img
+{
+}
+
+.locations .location .address
+{
+    margin-bottom: 15px;
+    padding-left: 1px;
+}
+
+.locations .location .map_link
+{
+	margin-top: 20px;
+}
+
+.locations .location .map_link .divider
+{
+	color: #ccc;
+	margin: 0 2px;
+}
+
+.locations .location .phone-wrapper,
+.locations .location .fax-wrapper,
+.locations .location .info-wrapper
+{
+	margin-bottom: 4px;
+	border-bottom: 1px solid #eee;
+}
+
+.locations .location .map_link a,
+.locations .location .map_link span
+{
+	display: inline-block;
+}
+
+.locations .location .phone-wrapper strong,
+.locations .location .fax-wrapper strong
+{
+	display: inline-block;
+	width: 70px;
+}
+
+.locations .location .phone-wrapper .num,
+.locations .location .fax-wrapper .num
+{
+	text-align: right;
+	float: right;
+}
+
+.locations .location .locations_gmap{
+	margin: 10px 0;
+}
+
+.locations .location .info-wrapper ul{
+	padding: 0 0 0 20px;
+}
+
+/* Store Locator */
+.store_locator
+{
+
+}
+.store_locator .input_wrapper
+{
+	padding-bottom: 10px;
+}
+.store_locator .input_wrapper label
+{
+	display: block;
+}
+
+/* Fix to make sure the Google Maps controls don't get messed up.
+ * More info: See http://stackoverflow.com/questions/7471830/google-maps-api-v3-weird-ui-display-glitches-with-screenshot
+ */
+.map-canvas img,
+#map-canvas img { 
+	max-width: none !important;
+}
+
+/* Search results */
+.store_locator .map-canvas,
+.store_locator #map-canvas {
+	margin-bottom: 20px;
+	max-width: 100%;
+}
+
+.store_locator .search_again {
+	margin-bottom: 10px;
+}
+
+/* Search results - tile style */
+.store_locator.locations .locations_search_results {
+	margin-top: 20px;
+}
+.locations_search_results.tile {
+    margin-left: 0;
+}
+.store_locator.locations .locations_search_results > li {
+	display: inline-block;	
+	list-style-type: none;
+	margin-right: 4%;
+	width: 48%;
+}
+.store_locator.locations .locations_search_results.tile > li {
+    vertical-align: top;
+}
+.store_locator.locations .locations_search_results > li:nth-child(even) {
+	margin-right: 0;
+}
+.store_locator.locations .locations_search_results .location {
+	width: 100%;
+}
+.store_locator.locations .locations_search_results .location:last-child {
+	margin-right: 0;
+}
+.store_locator.locations .locations_search_results .location .distance-wrapper {
+	margin-bottom: 20px;
+}
+.store_locator.locations .locations_search_results .location .map_link {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+/* Compact Style */
+.store_locator.compact {
+	border: 1px solid gray;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.store_locator.compact,
+.store_locator.compact div {
+	box-sizing: border-box;
+}
+
+.store_locator.compact .store_locator_search_form_wrapper label {
+	font-weight: bold;
+}
+
+.store_locator.compact .store_locator_caption {
+    margin: 0;
+    padding: 10px;
+}
+
+.store_locator.compact .map-canvas,
+.store_locator.compact #map-canvas {
+	margin-bottom: 0;
+}
+.store_locator.compact h3.search_again {
+	display: none;
+}
+.store_locator.compact .store_locator_search_form_wrapper {
+    background-color: lightsteelblue;
+    border-bottom: 1px solid gray;
+    padding: 8px 12px;
+}
+.store_locator.compact > p {
+    background-color: #ececec;
+    border-bottom: 1px solid gray;
+    padding: 10px 20px;
+	margin: 0;
+}
+.store_locator.compact .store_locator_wrapper {
+    height: 502px;
+    position: relative;
+    width: 100%;
+}
+.store_locator.compact.small.show_results .store_locator_wrapper {
+	padding-top: 240px;
+	position: relative;
+	margin-bottom: 240px;
+}
+
+.store_locator.compact .store_locator_wrapper .left_col {
+    bottom: 0;
+	display: none;
+    left: 0;
+    overflow-y: auto;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 300px;
+    max-width: 100%;
+}
+.store_locator.compact.medium .store_locator_wrapper .left_col {
+	width: 250px;
+}
+
+.store_locator.compact.small.show_results .store_locator_wrapper .right_col,
+.store_locator.compact.small .store_locator_wrapper .right_col {
+	position: relative;
+	left: 0;
+	top: 0;
+	max-height: 240px;
+}
+
+.store_locator.compact.small .store_locator_wrapper .left_col {
+	position: absolute;
+	left: 0;
+	height: 240px;
+	width: 100%;
+}
+
+.store_locator.compact.show_results .store_locator_wrapper .left_col {
+	display: block;
+}
+
+.store_locator.compact .store_locator_wrapper .left_col .results_found_message {
+    background-color: gainsboro;
+    font-size: 14px;
+    margin-bottom: 0;
+    padding: 8px 12px;
+}
+
+.store_locator.compact .store_locator_wrapper .right_col {
+    left: 0px;
+    position: absolute;
+    right: 0;
+}
+
+.store_locator.compact.show_results .store_locator_wrapper .right_col {
+    left: 300px;
+}
+
+.store_locator.compact.show_results.medium .store_locator_wrapper .right_col {
+	left: 250px;
+}
+
+.store_locator.compact .store_locator_wrapper .locations_search_results {
+	margin-left: 0;
+	list-style-type: none;
+	padding: 20px 10px 0 48px;
+}
+
+.store_locator.compact .locations_search_results li > h3 {
+    font-size: 16px;
+    margin-bottom: 3px;
+	line-height: 1.5;
+    margin-top: 3px;
+}
+
+.store_locator.compact .store_locator_wrapper .locations_search_results  {
+	counter-reset: step-counter;
+}
+
+.store_locator.compact .store_locator_wrapper .locations_search_results li {
+	cursor: pointer;
+    margin-bottom: 30px;
+	position: relative;
+}
+
+.store_locator.compact .store_locator_wrapper .locations_search_results li:before {
+    background-color: forestgreen;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: white;
+    content: counter(step-counter, decimal);
+    counter-increment: step-counter;
+    font-size: 12px;
+    font-weight: bold;
+    left: -36px;
+    margin-right: 5px;
+    padding: 2px;
+    position: absolute;
+    text-align: center;
+    top: 1px;
+    width: 24px;
+}
+
+.store_locator.compact .store_locator_wrapper .locations_search_results li.current_item {
+    /* background-color: lightyellow; */
+}
+
+.store_locator.compact .store_locator_wrapper .locations_search_results li.current_item:before {
+    background-color: dodgerblue;
+}
+
+.store_locator.compact .store_locator_wrapper .locations_search_results li .address {
+	margin-bottom: 4px;
+}
+.store_locator.compact .store_locator_wrapper .locations_search_results li .address,
+.store_locator.compact .store_locator_wrapper .locations_search_results li .phone-wrapper {
+	font-size: 14px;
+}
+
+.store_locator.compact .store_locator_wrapper .locations_search_results li .distance-wrapper {
+	font-size: 12px;
+}
+
+.store_locator.compact .store_locator_wrapper .locations_search_results li .directions-wrapper {
+	font-size: 12px;
+}
+
+.store_locator.compact .store_locator_query {
+    display: inline-block;
+    margin-right: 2%;
+	vertical-align: top;
+    width: 78%;
+}
+
+/* Adjust search input width - only category *or* radius showing */
+.store_locator.compact .show_category_select .store_locator_query,
+.store_locator.compact .show_search_radius .store_locator_query {
+    width: 56%;
+}
+
+/* Adjust search input width - both category *and* radius showing */
+.store_locator.compact .show_category_select.show_search_radius .store_locator_query {
+    width: 34%;
+}
+
+.store_locator.compact .store_locator_query > input {
+	border: 1px solid #ddd;
+	font-size: 16px;
+	line-height: 1.5;
+    padding: 0.625em 0.4375em;
+    width: 100%;
+}
+.store_locator.compact .store_locator_radius {
+    display: inline-block;
+	font-size: 16px;
+	line-height: 1.5;
+    margin-right: 2%;
+    width: 20%;
+}
+
+.store_locator.compact .store_locator_radius > select {
+	border: 1px solid #ddd;
+    padding: 0.625em 0.4375em;
+	font-size: 16px;
+	line-height: 1.5;
+    width: 100%;
+}
+.store_locator.compact .store_locator_category {
+    display: inline-block;
+    margin-right: 2%;
+    width: 20%;
+}
+.store_locator.compact .store_locator_category > select {
+	border: 1px solid #ddd;
+    padding: 0.625em 0.4375em;
+	font-size: 16px;
+	line-height: 1.5;
+    width: 100%;
+}
+
+.store_locator.compact .store_locator_category .description {
+	display: none;
+}
+
+.store_locator.compact .submit_wrapper {
+    display: inline-block;
+    width: 20%;
+}
+
+/* @media only screen and (max-width: 400px) { */
+.store_locator.compact.small .submit_wrapper,
+.store_locator.compact.small .store_locator_query,
+.store_locator.compact.small .show_category_select.show_search_radius .store_locator_query,
+.store_locator.compact.small .store_locator_category,
+.store_locator.compact.small .store_locator_radius {
+	display: block;
+	margin-right: 0;
+	width: 100%;
+}
+
+
+.store_locator.compact .submit_wrapper .btn {
+	font-size: 16px;
+	padding: 0.84375em 0.875em 0.78125em;
+	margin-top: 10px;
+	text-transform: none;
+	width: 100%;
+	vertical-align: baseline;
+}
+
+/* Info Windows (popups within map) */
+.store_locator.compact.small .store_locator_info_window {
+	min-width: 50px;	
+}
+.store_locator.compact.medium .store_locator_info_window,
+.store_locator.compact.large .store_locator_info_window {
+	min-width: 200px;
+}
+
+.store_locator_info_window #bodyContent .addr {
+	margin-bottom: 0;
+}
+
+.store_locator_info_window #bodyContent .phone,
+.store_locator_info_window #bodyContent .fax,
+.store_locator_info_window #bodyContent .directions,
+.store_locator_info_window #bodyContent .email {
+	margin-bottom: 4px;
+}
+
+.store_locator_info_window #bodyContent .phone:last-child,
+.store_locator_info_window #bodyContent .fax:last-child,
+.store_locator_info_window #bodyContent .email:last-child,
+.store_locator_info_window #bodyContent .directions:last-child {
+	margin-bottom: 0px;
+}
+
+.store_locator_info_window .store_locator_location_heading {
+	margin-top: 4px !important; 
+	margin-bottom: 4px !important;
+}
+
+/* Remove the underlines */
+.store_locator_info_window .store_locator_location_heading,
+.store_locator_info_window .store_locator_location_heading a,
+.store_locator_info_window .store_locator_location_heading a:visited, 
+.store_locator_info_window .store_locator_location_heading a:active, 
+.store_locator_info_window .store_locator_location_heading a:link,
+.store_locator_info_window .store_locator_location_heading a:hover {
+	border-bottom: 0 none;
+	box-shadow: none;
+	text-decoration: none;
+}
+
+/* Widget css fixes */
+.singleLocationWidget .locations .location,
+.locationsListWidget .locations .location {
+	background-color: white;
+	color: black;
+}
+.locationsListWidget .locations .location,
+.singleLocationWidget .locations .location {
+	min-width: 50px;
+}
+
+.singleLocationWidget .locations .location a,
+.singleLocationWidget .locations .location a:visited,
+.singleLocationWidget .locations .location a:active,
+.locationsListWidget .locations .location a,
+.locationsListWidget .locations .location a:visited,
+.locationsListWidget .locations .location a:active {
+	color: forestgreen;
+}

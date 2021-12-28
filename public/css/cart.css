@@ -1,0 +1,40 @@
+.cart
+{
+	width: 100%
+	
+	color:white;
+
+	background-color: rgb(40,167,69);
+
+}
+.cart h4
+{
+	color: white;
+	
+	margin-left:10%;
+	font-size: 3rem;
+}
+.b1 
+{
+	width: 17rem;
+  height: 3rem;
+}
+.b2
+{
+		width: 17rem;height: 3rem;
+}
+.b3
+{
+		width: 17rem;height: 3rem;
+}
+
+.ab
+{
+	width: 80%;
+	border:1px solid black;
+	
+}
+.text h6
+{
+	font-size: 2rem;
+}

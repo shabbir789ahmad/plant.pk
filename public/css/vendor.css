@@ -1,0 +1,26 @@
+.imag
+{
+	background-image: url("/pic/evergreen.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width:100%; height:500px;
+	overflow: hidden;
+	
+}
+.ca
+{
+	position: absolute;
+	background-color: red;
+	bottom: 3%;
+	
+  width: 98%;
+	color: black;
+}
+.container-fluid
+{
+	font-family: sans-serif;
+	background-color:#FBFBFB;
+	margin: 0;
+	padding: 0;
+}

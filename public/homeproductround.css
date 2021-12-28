@@ -1,0 +1,18 @@
+.round
+{
+	width: 60%;
+	height: 60%;
+	padding: 0;
+	border-radius: 50%;
+	border:2px solid black;
+	
+}
+.checked
+{
+	color: orange;
+}
+.body
+{
+	overflow: hidden;
+}
+
